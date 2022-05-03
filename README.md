@@ -1,4 +1,4 @@
-# ToDo App: A todo list app with basic functionalities like add a task, editing and deleteing a task as well as bulk deletion of tasks marked as completed.
+# ToDo App: A todo list app with basic functionalities like add a task, editing and deleting a task as well as bulk deletion of tasks marked as completed.
 ***
 ## Deployed version:
 ## Built With
