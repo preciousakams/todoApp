@@ -1,0 +1,96 @@
+main {
+  background-color: rgb(246, 246, 241);
+  padding: 1% 0;
+}
+
+.container {
+  background-color: #fff;
+  width: 45%;
+  max-width: 80%;
+  height: auto;
+  box-shadow: 0 0 2px 3px rgb(245, 244, 244);
+  margin: 10% 28%;
+}
+
+h4 {
+  display: block;
+  height: 28px;
+  padding-top: 20px;
+  padding-left: 5px;
+}
+
+.fa-solid {
+  margin-left: 75%;
+}
+
+form {
+  border-bottom: 0.6px solid rgb(216, 216, 216);
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0;
+  position: relative;
+  border-top: 0.6px solid rgb(216, 216, 216);
+  border-right: none;
+  border-left: none;
+}
+
+input {
+  border: transparent;
+  font-style: italic;
+  width: 85%;
+  padding: 3%;
+}
+
+button {
+  position: relative;
+  right: 3.2%;
+  border: transparent;
+  background-color: white;
+}
+
+.clear {
+  text-align: center;
+  padding: 2%;
+  border-bottom: 0.6px solid rgb(216, 216, 216);
+  color: rgb(168, 162, 162);
+}
+
+.container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.container ul li {
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 0.6px solid rgb(216, 216, 216);
+}
+
+.check {
+  width: 0.8em;
+  height: 0.8em;
+  cursor: pointer;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.task {
+  font-size: 18px;
+  padding: 0 10px;
+}
+
+.task:focus {
+  outline: none;
+}
+
+.fa-ellipsis-vertical {
+  position: relative;
+  float: right;
+  cursor: pointer;
+  bottom: 15px;
+  right: 10px;
+}
+
+.complete {
+  color: rgba(192, 192, 192, 0.8);
+  text-decoration: line-through;
+}
