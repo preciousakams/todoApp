@@ -12,19 +12,17 @@
   <main>
     <div class="container">
       <h4>Today's To Do <i class="fa-solid fa-rotate"></i></h4>
-      <form>
-          <input class="todoItem" type="text" placeholder="Add to your List..." autofocus />
-          <button id="todoPush" type="submit">&plus;</button>
+      <form class="form">
+          <input class="todoInput" type="text" placeholder="Add to your List..." autofocus />
+          <span id="msg"></span>
+          <button class="todoBtn" type="submit">&plus;</button>
       </form>
-      <div class="todoDisplay">
-          
-      </div>
 
-      <ul>
+      <ul class="todoList">
 
       </ul>
       <div class="clear">
-        <a class="clear-btn">Clear all completed</a>
+        <button class="clear-btn">Clear all completed</button>
     </div>
 
     </div>
