@@ -68,7 +68,7 @@ form {
   border-bottom: 0.6px solid rgb(216, 216, 216);
 }
 
-.done span {
+.done input {
   text-decoration: line-through;
 }
 
