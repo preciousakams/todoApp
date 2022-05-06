@@ -3,6 +3,7 @@ import './style.css';
 const form = document.querySelector('.form');
 const input = document.querySelector('.todoInput');
 const list = document.querySelector('.todoList');
+const clearComplete = document.querySelector('.clear-btn');
 
 let todoItems = [];
 
@@ -60,6 +61,20 @@ function deleteTodo(key) {
   todoItems = todoItems.filter((item) => item.index !== Number(key));
   renderTodo(todo);
 }
+
+clearComplete.addEventListener('click', () => {
+  const index = todoItems.findIndex((item) => item.completed === true);
+  const todo = {
+    deleted: true,
+    ...todoItems[index],
+  };
+  todoItems = todoItems.filter((item) => item.completed !== true);
+  todoItems.forEach((task, index) => {
+    task.index = index + 1;
+  });
+  renderTodo(todo);
+  document.location.reload();
+});
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
