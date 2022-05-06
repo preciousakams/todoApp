@@ -9,7 +9,7 @@ let todoItems = [];
 function renderTodo(todo) {
   localStorage.setItem('todoItems', JSON.stringify(todoItems));
 
-  const item = document.querySelector(`[data-key='${todo.id}']`);
+  const item = document.querySelector(`[data-key='${todo.index}']`);
 
   if (todo.deleted) {
     item.remove();
@@ -17,14 +17,14 @@ function renderTodo(todo) {
     return;
   }
 
-  const isChecked = todo.checked ? 'done' : '';
+  const iscompleted = todo.completed ? 'done' : '';
   const node = document.createElement('li');
-  node.setAttribute('class', `todo-item ${isChecked}`);
-  node.setAttribute('data-key', todo.id);
+  node.setAttribute('class', `todo-item ${iscompleted}`);
+  node.setAttribute('data-key', todo.index);
   node.innerHTML = `
-    <input id="${todo.id}" type="checkbox"/>
-    <label for="${todo.id}" class="tick js-tick"></label>
-    <input value="${todo.text}" class="todo" ></input>
+    <input index="${todo.index}" type="checkbox"/>
+    <label for="${todo.index}" class="tick js-tick"></label>
+    <input value="${todo.description}" class="todo" ></input>
   
     <i class="fa-solid fa-ellipsis-vertical js-delete-todo"></i>
    
@@ -36,37 +36,37 @@ function renderTodo(todo) {
     list.append(node);
   }
 }
-function addTodo(text) {
+function addTodo(description) {
   const todo = {
-    text,
-    checked: false,
-    id: Date.now(),
+    description,
+    completed: false,
+    index: Date.now(),
   };
   todoItems.push(todo);
   renderTodo(todo);
 }
 function toggleDone(key) {
-  const index = todoItems.findIndex((item) => item.id === Number(key));
-  todoItems[index].checked = !todoItems[index].checked;
+  const index = todoItems.findIndex((item) => item.index === Number(key));
+  todoItems[index].completed = !todoItems[index].completed;
   renderTodo(todoItems[index]);
 }
 
 function deleteTodo(key) {
-  const index = todoItems.findIndex((item) => item.id === Number(key));
+  const index = todoItems.findIndex((item) => item.index === Number(key));
   const todo = {
     deleted: true,
     ...todoItems[index],
   };
-  todoItems = todoItems.filter((item) => item.id !== Number(key));
+  todoItems = todoItems.filter((item) => item.index !== Number(key));
   renderTodo(todo);
 }
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const text = input.value.trim();
-  if (text !== '') {
-    addTodo(text);
+  const description = input.value.trim();
+  if (description !== '') {
+    addTodo(description);
     input.value = '';
     input.focus();
   }
