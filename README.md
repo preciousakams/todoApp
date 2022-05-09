@@ -4,6 +4,7 @@
 ## Built With
 * HTML/CSS
 * Javascript
+* webpack
 * Node Js
 
 ## Getting Started
