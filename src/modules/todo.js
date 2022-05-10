@@ -23,10 +23,9 @@ function renderTodo(todo) {
   node.innerHTML = `
     <input index="${todo.index}" type="checkbox"/>
     <label for="${todo.index}" class="tick js-tick"></label>
-    <input value="${todo.description}" class="todo" ></input>
+    <input value="${todo.description}" class="todo" readonly ></input>
   
-    <i class="fa-solid fa-ellipsis-vertical js-delete-todo"></i>
-   
+    <i class="fa-solid fa-trash-can js-delete-todo"></i>
   `;
 
   if (item) {

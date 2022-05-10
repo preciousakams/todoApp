@@ -106,7 +106,7 @@ input[type="checkbox"] {
   outline: none;
 }
 
-.fa-ellipsis-vertical {
+.fa-trash-can {
   display: inline;
   position: absolute;
   cursor: pointer;
