@@ -1,7 +1,7 @@
 # ToDo App
 ### A todo list app with basic functionalities like add a task, deleting a task as well as bulk deletion of tasks marked as completed.
 ***
-## [Deployed version](https://kamzzy.github.io/todoApp/dist/index.html)
+## Deployed version: [https://kamzzy.github.io/todoApp/dist/index.html](https://kamzzy.github.io/todoApp/dist/index.html)
 ## Built With
 * HTML/CSS
 * Javascript
